@@ -1,0 +1,46 @@
+###
+GET http://localhost:8001/medico HTTP/1.1
+
+###
+DELETE http://localhost:8001/paciente/3 HTTP/1.1
+
+###
+POST http://localhost:8001/medico HTTP/1.1
+Content-Type: application/json
+
+{
+    "Nombre": "Manuela",
+    "Apellidos": "Alvarez",
+    "cedula": "001-9999999-1",
+    "Direccion": "Arroyo Hondo",
+    "Telefono": "911",
+    "especialidad": "Dermatologa",
+    "Departamento": "cualquiera"
+}
+
+###
+PUT http://localhost:8001/paciente/1 HTTP/1.1
+Content-Type: application/json
+
+{
+    "Nombre": "Lenny",
+    "Apellido": "Guzman"
+}
+
+###
+PUT http://localhost:8001/medico/1 HTTP/1.1
+Content-Type: application/json
+
+{
+    "Nombre": "Punti",
+    "Apellidos": "Jordan"
+}
+
+###
+PUT http://localhost:8001/visita/200 HTTP/1.1
+Content-Type: application/json
+
+{
+    "Diagnostico": "Cancer",
+    "Tratamiento": "Quimioterapia"
+}
